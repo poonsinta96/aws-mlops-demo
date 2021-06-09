@@ -47,7 +47,7 @@ The source code for the ML Pipeline Stage can be found in _mlops-pipeline-demo_ 
    Once your project is successfully built - you will see the same two folders which can be found inside our _mlops-pipeline-demo_ folder.
    
 2. Change the ModelBuild Component
-   - Firstly, import the following folder _aws-mlops-demo/mlops-pipeline-demo/sagemaker-pipeline-demo-1-p-kjjql6k63ho9-modelbuild/pipelines/credit_ into your project at the same file directory which shoudld be at _project_name/project_name-modelbuild/pipelines_ where an abalone folder can be found.
+   - Firstly, import the following folder _aws-mlops-demo/mlops-pipeline-demo/sagemaker-pipeline-demo-1-p-kjjql6k63ho9-modelbuild/pipelines/credit_ into your project at the same file directory which should be at _project_name/project_name-modelbuild/pipelines_ where an abalone folder can be found.
    - Replace the following file _codebuild-buildspec.yml_ from this repository to ensure that it is pointing at the new _credit_ folder instead of _abalone_ folder.
    
 3. Change the ModelDeploy Component 
