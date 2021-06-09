@@ -24,6 +24,8 @@ It can be further broken down into four main segments as shown below.
 
 ![alt text](https://github.com/poonsinta96/aws-mlops-demo/blob/main/img/MLOps%20Architecture%20Diagram%20Explained.png?raw=true)
 
+## Implementing Instructions 
+
 ### Experimentation Stage
 
 The Experimentation Stage is meant to show the typical workflow of a data scientist when they are selecting, training and testing their model.  
