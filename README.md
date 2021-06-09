@@ -40,8 +40,25 @@ Architecture Diagram Component(s): Refactoring and CI/CD
 
 The source code for the ML Pipeline Stage can be found in _mlops-pipeline-demo_ however, to successfully run this stage, you have to create a SageMaker Project from within SageMaker Studio and manually import certain folders and edit certain files. Below will be the steps required to run this stage.
 
-1. Create SageMaker Project
-2. Change the CodeBuild Component
-3. Change the CodeDeploy Component 
+**Steps to implement the ML Pipeline Stage**
+1. Create SageMaker Project 
+   You can follow this link to learn how to create your own SageMaker Project: https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-projects-create.html
+   _Note: The project template we will be using is - MLOps Template for model building, training and deployment._
+   Once your project is successfully built - you will see the same two folders which can be found inside our _mlops-pipeline-demo_ folder.
+   
+2. Change the ModelBuild Component
+   - Firstly, import the following folder _aws-mlops-demo/mlops-pipeline-demo/sagemaker-pipeline-demo-1-p-kjjql6k63ho9-modelbuild/pipelines/credit_ into your project at the same file directory which shoudld be at _project_name/project_name-modelbuild/pipelines_ where an abalone folder can be found.
+   - Replace the following file _codebuild-buildspec.yml_ from this repository to ensure that it is pointing at the new _credit_ folder instead of _abalone_ folder.
+   
+3. Change the ModelDeploy Component 
+   - Replace the following file endpoint-config-template.yml_ from this repository to ensure that data capture component is enabled.
+
+### Monitoring Stage
+
+The Monitoring Stage is meant to set up SageMaker Model Monitor and show how it deals with different situation of data drifts. 
+
+Architecture Diagram Component(s): Monitoring
+
+In addition, you can uses services such as cloudwatch, lambda or SES with SageMaker Model Monitor to allow you to build a workflow to retrain the model/retrigger the pipeline.  
 
 
